@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of America | Online Banking</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; }
+        header { background: #012169; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; }
+        .nav { background: #e60000; color: white; padding: 10px; }
+        .nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: flex; gap: 20px; }
+        .sidebar { width: 250px; background: white; padding: 20px; border: 1px solid #ddd; }
+        .main-content { flex: 1; background: white; padding: 20px; border: 1px solid #ddd; }
+        .account { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; background: #fafafa; }
+        .balance { font-size: 28px; color: #012169; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 10px; text-align: left; border-bottom: 1px solid #ddd; }
+        button { background: #e60000; color: white; border: none; padding: 10px 20px; margin: 5px; cursor: pointer; }
+        button:hover { background: #c90000; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bank of America</div>
+        <div>Welcome, John Doe | <a href="index.html" style="color:white;">Log Out</a> | Help</div>
+    </header>
+    <div class="nav">
+        <a href="#">Accounts</a>
+        <a href="#">Transfers & Payments</a>
+        <a href="#">Credit Cards</a>
+        <a href="#">Loans & Mortgages</a>
+        <a href="#">Investing</a>
+        <a href="#">Security</a>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Quick Access</h3>
+            <ul>
+                <li><a href="#">Mobile Check Deposit</a></li>
+                <li><a href="#">Statements & Documents</a></li>
+                <li><a href="#">Alerts & Notifications</a></li>
+                <li><a href="#">Security Center</a></li>
+            </ul>
+            <p><strong>Security Meter:</strong> High <span style="color:green;">●</span></p>
+        </div>
+        <div class="main-content">
+            <h1>Accounts Overview — as of July 9, 2026</h1>
+            
+            <div class="account">
+                <h3>Advantage Savings •••• 1234</h3>
+                <div class="balance">$12,456.78</div>
+                <p>Available: $12,456.78</p>
+            </div>
+            
+            <div class="account">
+                <h3>Advantage Checking •••• 5678</h3>
+                <div class="balance">$3,245.12</div>
+                <p>Available: $3,245.12</p>
+            </div>
+            
+            <div class="account">
+                <h3>Visa Signature Credit Card •••• 9012</h3>
+                <div class="balance" style="color:#e60000;">-$456.23</div>
+                <p>Available Credit: $4,543.77</p>
+            </div>
+
+            <h2>Recent Activity</h2>
+            <table>
+                <tr><th>Date</th><th>Description</th><th>Amount</th></tr>
+                <tr><td>07/08/2026</td><td>WHOLE FOODS MARKET</td><td style="color:#e60000;">-$87.34</td></tr>
+                <tr><td>07/07/2026</td><td>Direct Deposit - ACME CORP</td><td style="color:green;">+$2,850.00</td></tr>
+                <tr><td>07/06/2026</td><td>AMAZON.COM</td><td style="color:#e60000;">-$129.99</td></tr>
+                <tr><td>07/05/2026</td><td>TRANSFER TO SAVINGS</td><td style="color:#e60000;">-$500.00</td></tr>
+            </table>
+
+            <div style="margin-top: 30px;">
+                <button onclick="fakeAction('transfer')">Transfer Money</button>
+                <button onclick="fakeAction('bill')">Pay Bills</button>
+                <button onclick="fakeAction('deposit')">Deposit Check</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function fakeAction(type) {
+            let msg = '';
+            if (type === 'transfer') msg = 'Transfer form opened (demo). Enter details to continue...';
+            else if (type === 'bill') msg = 'Bill pay scheduled (demo).';
+            else msg = 'Mobile deposit started (demo). Upload check image.';
+            alert(msg + '\n\nThis is a simulated banking environment for demonstration/scambaiting.');
+        }
+    </script>
+</body>
+</html>
